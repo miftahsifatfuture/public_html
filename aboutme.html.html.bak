@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>aboutme.html</title>
+  </head>
+  <body style="  background-color: DodgerBlue;">
+    <h1><strong style="font-family:cursive;">Hello, my name is Miftah</strong></h1>
+    <hr>
+    <p><i></i></p>
+    <pre style="font-size:20px"><i> I really like to play soccer.
+ Soccer is a sport that I have
+ played since a young age. In fact,
+ this summer I am playing soccer for
+ a summer league.<img src="file:///Z:/public_html/images/Soccerball.svg.png" alt="soccer"
+title="soccer" style="width: 76px; height: 76px;"><br>
+ Where am I from?<br>I am from Bangladesh<img src="file:///Z:/public_html/images/bangladesh.jpg"
+alt="flag" title="flag"> <br></i></pre>
+    <p></p>
+  </body>
+</html>

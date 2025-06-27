@@ -1,0 +1,151 @@
+/* General body and text styling */
+body {
+    background: linear-gradient(-45deg, #007bff, #0056b3, #66ccff, #3399ff);
+    background-size: 400% 400%;
+    animation: gradient-animation 15s ease infinite;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    color: white;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+@keyframes gradient-animation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Header and Footer */
+header, footer {
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 20px 40px;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+header h1 {
+    margin: 0;
+    font-family: cursive;
+    font-size: 3em; /* Increased header title size */
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Main layout container */
+.main-container {
+    display: flex;
+    flex-grow: 1;
+}
+
+/* Navigation sidebar */
+nav {
+    width: 220px;
+    flex-shrink: 0;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: sticky; /* Makes nav stick on scroll */
+    top: 20px;
+    padding-top: 20px;
+}
+
+nav li a {
+    display: block;
+    color: white;
+    padding: 15px 25px;
+    text-decoration: none;
+    font-size: 1.2em;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: background-color 0.3s;
+}
+
+nav li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Active page link */
+nav li a.active {
+    background: #4CAF50;
+    color: white;
+}
+
+/* Main content column */
+main {
+    flex-grow: 1;
+    padding: 20px 40px;
+    overflow-y: auto;
+}
+
+main h1 {
+    font-family: cursive;
+    font-size: 2.2em; /* Increased main h1 size */
+}
+
+main h2 {
+    font-family: cursive;
+    font-size: 1.8em; /* Increased main h2 size */
+}
+
+main p { /* General paragraph styling */
+    font-size: 1.1em; /* Set a base font size for paragraphs */
+    line-height: 1.6;
+    margin-bottom: 1em;
+}
+
+main ul { /* List styling */
+    list-style: disc;
+    margin-left: 20px;
+    margin-bottom: 1em;
+}
+
+main li { /* List item styling */
+    font-size: 1.1em; /* Consistent with paragraphs */
+    line-height: 1.6;
+    margin-bottom: 0.5em;
+}
+
+main a {
+    color: #a7d8ff;
+    font-weight: bold;
+}
+/* General image styling within main content */
+main img { 
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+/* Specific styling for the image in index.html */
+.main-image {
+    float: left;
+    margin-right: 20px;
+}
+
+/* Utility class for pre-formatted text */
+.pre-text {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    font-size: 1.3em; /* Increased pre-formatted text size */
+    line-height: 1.6;
+}
+
+/* Styling for the bouncing football */
+#football {
+    width: 40px;  /* Adjust size as needed */
+    height: 40px;
+    background-color: brown;  /* Or use an image */
+    border-radius: 50%; /* Make it round */
+    position: absolute; /* Allow precise positioning */
+    left: 50px; /* Initial position */
+    top: 50px;
+}

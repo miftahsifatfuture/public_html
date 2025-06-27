@@ -1,0 +1,87 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    /* A nice, dark gradient for the "Launch 2027" theme */
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+}
+
+#logo {
+    width: 120px; /* A good size for a logo */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 15px; /* Space between logo and header */
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.2)); /* A subtle glow */
+}
+
+#welcome-header {
+    font-size: 3em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    /* Add animation for subtle movement */
+    animation: welcomeMove 3s ease-in-out infinite alternate;
+}
+
+#highlighted-text {
+    /* This animation cycles through 5 colors over 5 seconds, repeating forever.
+       The steps(1, end) timing function creates an instant color change every second. */
+    animation: color-change 5s infinite steps(1, end);
+}
+
+/* Keyframes for the color-changing text */
+@keyframes color-change {
+    0% { color: #ffadad; }   /* Light Red */
+    20% { color: #ffd6a5; }  /* Light Orange */
+    40% { color: #fdffb6; }  /* Light Yellow */
+    60% { color: #caffbf; }  /* Light Green */
+    80% { color: #9bf6ff; }  /* Light Blue */
+}
+
+/* Define the animation keyframes */
+@keyframes welcomeMove {
+    0% {
+        transform: translateX(0); /* Start at original position */
+    }
+    50% {
+        transform: translateX(10px); /* Move 10px to the right */
+    }
+    100% {
+        transform: translateX(0); /* Return to original position */
+    }
+}
+
+p {
+    font-size: 1.2em;
+}
+
+input[type="text"] {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin: 0 10px;
+}
+
+button {
+    padding: 8px 15px;
+    border-radius: 5px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+label {
+    font-size: 1.1em;
+}
+
+/* A class to style the button when it has been clicked */
+button.clicked {
+    background-color: #FFD700; /* A nice gold/yellow */
+    color: #333; /* Darker text for better readability on yellow */
+}

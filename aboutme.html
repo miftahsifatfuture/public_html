@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>aboutme.html</title>
+    <style>
+        button {
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 5px;
+        }
+        button:nth-of-type(odd) {
+            background-image: linear-gradient(to right, #ff7e5f, #feb47b);
+        }
+        button:nth-of-type(even) {
+            background-image: linear-gradient(to right, #6a11cb, #2575fc);
+        }
+        /* New animation styles for text */
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .animated-title {
+            animation: fadeInUp 1s ease-out forwards;
+        }
+    </style>
+    <link rel="stylesheet" href="main_style.css">
+    <link rel="stylesheet" href="animated_background.css">
+  </head>
+  <body>
+    <header>
+      <h1>About Miftah</h1>
+    </header>
+    <div class="main-container">
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="aboutme.html" class="active">About me</a></li>
+          <li><a href="projects.html">Projects</a></li>
+        </ul>
+      </nav>
+      <main style="background-color: #000066;">
+        <h1 class="animated-title" style="text-align: center; background-color: #000066;"><span
+            style="color: #ffcc00;">Hello, my name is Miftah</span></h1>
+        <hr>
+        <div style="text-align: center;"> <img src="images/ronaldo.gif" alt="Ronaldo GIF"
+            style="width: 300px; margin: 15px 0;"> </div>
+        <p class="pre-text" style="background-color: #000066;"><u> I really like to play soccer.</u>
+   Soccer is a sport that I have
+   played since a young age. In fact,
+   this summer I am playing soccer for
+   a summer league.<br><u>
+   Where am I from?</u><br>I am from Bangladesh but I was born in the U.S.<br>in Worcester, Massachusetts. I later moved to Shrewsbury,<br>Massachusetts when I was in Kindergarten.<br><a
+href="https://www.britannica.com/place/Bangladesh" title="Bangladesh" target="_blank">Click Here to Learn About Bangladesh</a></p>
+        <p class="pre-text" style="background-color: #000066;"><img src="images/Gen._Artemas_Ward_Homestead.jpg"
+alt="Shrewsbury, MA" title="Shrewsbury, MA" style="width: 814px; height: 410px;"></p>
+        <p class="pre-text" style="background-color: #000066;">Shrewsbury</p>
+        <p class="pre-text" style="background-color: #000066;">Bangladeshi Flag</p>
+        <img src="images/bangladesh.jpg" alt="Bangladesh" title="Bangladesh" style="width: 567px; height: 261px;"><br>
+      </main>
+    </div>
+    <footer>
+      <p>Remember to try your best! That is what I think of when doing anything
+        to motivate myself.</p>
+    </footer>
+    <img id="football" src="images/football.png" alt="Bouncing Soccer Ball" style="position: absolute; width: 100px; height: 100px;">
+    <img id="football2" src="images/football.png" alt="Bouncing Soccer Ball" style="position: absolute; width: 75px; height: 75px;">
+    <script>
+      const football = document.getElementById('football');
+      let x = 50, y = 50; // Initial position
+      let dx = 2, dy = 2;  // Initial movement direction/speed
+      function animate() {
+        // Ensure the image is loaded before getting its dimensions
+        if (football.offsetWidth === 0 || football.offsetHeight === 0) {
+          requestAnimationFrame(animate); // Wait for image to load
+          return;
+        }
+        x += dx;
+        y += dy;
+        // Bounce off walls
+        if (x + football.offsetWidth > window.innerWidth || x < 0) dx = -dx;
+        if (y + football.offsetHeight > window.innerHeight || y < 0) dy = -dy;
+        football.style.left = x + 'px';
+        football.style.top = y + 'px';
+        requestAnimationFrame(animate);
+      }
+      animate(); // Start the animation
+
+      const football2 = document.getElementById('football2');
+      let x2 = 150, y2 = 150; // Initial position for second ball
+      let dx2 = 3, dy2 = -2;  // Initial movement direction/speed for second ball
+      function animate2() {
+        // Ensure the image is loaded before getting its dimensions
+        if (football2.offsetWidth === 0 || football2.offsetHeight === 0) {
+          requestAnimationFrame(animate2); // Wait for image to load
+          return;
+        }
+        x2 += dx2;
+        y2 += dy2;
+        // Bounce off walls
+        if (x2 + football2.offsetWidth > window.innerWidth || x2 < 0) dx2 = -dx2;
+        if (y2 + football2.offsetHeight > window.innerHeight || y2 < 0) dy2 = -dy2;
+        football2.style.left = x2 + 'px';
+        football2.style.top = y2 + 'px';
+        requestAnimationFrame(animate2);
+      }
+      animate2(); // Start the animation for the second ball
+    </script>
+  </body>
+</html>

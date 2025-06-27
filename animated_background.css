@@ -1,0 +1,33 @@
+/* Apply the animated gradient to the entire body */
+body {
+    /* Define a linear gradient with various shades of blue */
+    background: linear-gradient(-45deg, #007bff, #00c6ff, #0056b3, #00c6ff, #007bff);
+    /* Make the background larger than the viewport to allow for smooth shifting */
+    background-size: 400% 400%;
+    /* Apply the animation: name, duration (5s for rapid), timing function, infinite loop */
+    animation: blueGradientShift 5s ease infinite;
+    /* Ensure the background covers the full viewport even on scroll */
+    background-attachment: fixed;
+    /* Remove default body margins and padding */
+    margin: 0;
+    padding: 0;
+}
+
+/* Define the keyframes for the gradient animation */
+@keyframes blueGradientShift {
+    0% {
+        background-position: 0% 50%; /* Start position */
+    }
+    50% {
+        background-position: 100% 50%; /* Middle position */
+    }
+    100% {
+        background-position: 0% 50%; /* End position (loops back to start) */
+    }
+}
+
+/* Make main structural elements transparent to reveal the body background */
+/* Using !important to ensure these styles override any existing ones */
+.main-container, header, footer, main {
+    background-color: transparent !important;
+}
